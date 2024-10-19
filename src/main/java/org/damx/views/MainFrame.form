@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.damx.views.MainFrame">
+  <grid id="27dc6" binding="mainPanel" layout-manager="FormLayout">
+    <rowspec value="center:55px:noGrow"/>
+    <rowspec value="top:38dlu:noGrow"/>
+    <rowspec value="center:61px:noGrow"/>
+    <rowspec value="top:33dlu:noGrow"/>
+    <rowspec value="center:d:grow"/>
+    <colspec value="fill:d:grow"/>
+    <constraints>
+      <xy x="20" y="20" width="272" height="432"/>
+    </constraints>
+    <properties>
+      <maximumSize width="272" height="432"/>
+      <minimumSize width="272" height="432"/>
+      <preferredSize width="272" height="432"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="f495b" class="javax.swing.JButton" binding="ACTIONLISTENERButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="28" style="1"/>
+          <text value="ACTION LISTENER"/>
+        </properties>
+      </component>
+      <component id="71053" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="24" style="1"/>
+          <text value="LISTENERS"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
