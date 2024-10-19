@@ -3,6 +3,7 @@ package org.damx.views;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
+import java.awt.event.WindowListener;
 
 public class ItemDialog extends JDialog implements InterfaceView {
     private JPanel mainPanel;
@@ -19,6 +20,7 @@ public class ItemDialog extends JDialog implements InterfaceView {
     public void initWindow() {
         setContentPane(mainPanel);
         pack();
+        setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         setCommands();
         initComponents();
     }
@@ -42,6 +44,7 @@ public class ItemDialog extends JDialog implements InterfaceView {
     public void addListener(ActionListener listener) {
         cb_marcas.addItemListener((ItemListener) listener);
         cb_habilitar.addItemListener((ItemListener) listener);
+        this.addWindowListener((WindowListener) listener);
     }
 
     public void setTextToLabel(String text){
@@ -75,5 +78,10 @@ public class ItemDialog extends JDialog implements InterfaceView {
         cb_habilitar.setName("cb_habilitar");
 
         lb_marca.setText("-");
+    }
+
+    public void setDefaultValues(){
+        cb_habilitar.setSelectedIndex(0);
+        cb_marcas.setSelectedIndex(0);
     }
 }

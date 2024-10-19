@@ -3,11 +3,14 @@ package org.damx.controllers;
 import org.damx.services.WindowsService;
 import org.damx.views.ActionDialog;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
-public class ActionDialogController implements ActionListener {
+public class ActionDialogController implements ActionListener, WindowListener {
 
     // Comandos
     public static final String CHANGE_COLOR_PANEL = "CHANGE_COLOR_PANEL";
@@ -24,6 +27,15 @@ public class ActionDialogController implements ActionListener {
         actionDialog.setColorPanel(Color.RED);
     }
 
+
+    private void handleFirtsDialogOpen(){
+        JOptionPane.showMessageDialog(null, "HOLA! ESPERO QUE TE DIVIERTAS");
+    }
+
+    private void handleSetDialogToDefaultValues(){
+        actionDialog.setColorPanel(Color.BLACK);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
@@ -34,5 +46,40 @@ public class ActionDialogController implements ActionListener {
             default:
                 break;
         }
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+        handleFirtsDialogOpen();
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        handleSetDialogToDefaultValues();
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+
     }
 }

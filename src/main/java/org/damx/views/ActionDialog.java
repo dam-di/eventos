@@ -3,6 +3,7 @@ package org.damx.views;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 
 import static org.damx.controllers.ActionDialogController.CHANGE_COLOR_PANEL;
 
@@ -46,6 +47,7 @@ public class ActionDialog extends JDialog implements InterfaceView {
     @Override
     public void addListener(ActionListener listener) {
         bt_aceptar.addActionListener(listener);
+        this.addWindowListener((WindowListener) listener);
     }
 
     @Override

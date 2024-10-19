@@ -4,12 +4,9 @@ import org.damx.services.WindowsService;
 import org.damx.views.ItemDialog;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 
-public class ItemDialogController implements ItemListener, ActionListener {
+public class ItemDialogController implements ItemListener, ActionListener, WindowListener {
 
     private final WindowsService windowsService;
     private ItemDialog itemDialog;
@@ -47,8 +44,54 @@ public class ItemDialogController implements ItemListener, ActionListener {
         }
     }
 
+    private void handleSetDefaultValues(){
+        itemDialog.setDefaultValues();
+    }
+
+    private void handleExitDialog(){
+        int response = JOptionPane.showConfirmDialog(null, "¿Deseas salir?","Salir del programa" ,JOptionPane.YES_OPTION);
+        if(response == JOptionPane.YES_OPTION){
+            itemDialog.closeWindow();
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
+
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        handleExitDialog();
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        handleSetDefaultValues();
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
 
     }
 }
