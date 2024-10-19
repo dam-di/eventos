@@ -11,6 +11,7 @@
       <xy x="20" y="20" width="272" height="432"/>
     </constraints>
     <properties>
+      <inheritsPopupMenu value="true"/>
       <maximumSize width="272" height="432"/>
       <minimumSize width="272" height="432"/>
       <preferredSize width="272" height="432"/>
@@ -35,6 +36,16 @@
         <properties>
           <font name="Arial Black" size="24" style="1"/>
           <text value="LISTENERS"/>
+        </properties>
+      </component>
+      <component id="5cf12" class="javax.swing.JButton" binding="bt_itemlistener">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="28" style="1"/>
+          <text value="ITEM LISTENER"/>
         </properties>
       </component>
     </children>
