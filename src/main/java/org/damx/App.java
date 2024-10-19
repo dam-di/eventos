@@ -1,6 +1,7 @@
 package org.damx;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import org.damx.controllers.MainFrameController;
 import org.damx.services.WindowsService;
 import org.damx.views.ActionDialog;
 import org.damx.views.MainFrame;
@@ -22,17 +23,17 @@ public class App
 
         // Crear ventanas
         MainFrame mainFrame = new MainFrame();
-        ActionDialog actionDialog = new ActionDialog();
+        ActionDialog actionDialog = new ActionDialog(mainFrame, true);
 
         // Añadir ventanas al servicio
         windowsService.registerWindow("MainFrame",mainFrame);
         windowsService.registerWindow("ActionDialog", actionDialog);
 
         // Crear controladores
-
+        MainFrameController mainFrameController = new MainFrameController(windowsService);
 
         // Añadir Listeners
-
+        mainFrame.addListener(mainFrameController);
 
 
         // Mostrar ventana principal

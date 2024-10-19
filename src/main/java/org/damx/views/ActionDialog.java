@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 public class ActionDialog extends JDialog implements InterfaceView {
     private JPanel mainPanel;
 
-    public ActionDialog(){
+    public ActionDialog(JFrame parent, Boolean modal){
+        super(parent, modal);
         initWindow();
 
     }

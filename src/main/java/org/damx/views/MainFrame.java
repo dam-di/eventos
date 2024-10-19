@@ -3,8 +3,10 @@ package org.damx.views;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
+import static org.damx.controllers.MainFrameController.SHOW_ACTIONDIALOG;
+
 public class MainFrame extends JFrame implements InterfaceView {
-    private JButton ACTIONLISTENERButton;
+    private JButton bt_actionlistener;
     private JPanel mainPanel;
 
     public MainFrame() {
@@ -17,6 +19,7 @@ public class MainFrame extends JFrame implements InterfaceView {
         setContentPane(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
+        setCommands();
     }
 
     @Override
@@ -31,12 +34,12 @@ public class MainFrame extends JFrame implements InterfaceView {
 
     @Override
     public void setCommands() {
-
+        bt_actionlistener.setActionCommand(SHOW_ACTIONDIALOG);
     }
 
     @Override
     public void addListener(ActionListener listener) {
-
+        bt_actionlistener.addActionListener(listener);
     }
 
     @Override
