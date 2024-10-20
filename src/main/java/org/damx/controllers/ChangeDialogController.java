@@ -7,12 +7,9 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 
-public class ChangeDialogController implements ActionListener, ChangeListener, WindowListener {
+public class ChangeDialogController implements ActionListener, ChangeListener, WindowListener, KeyListener {
 
     private final WindowsService windowsService;
     private ChangeDialog changeDialog;
@@ -59,7 +56,7 @@ public class ChangeDialogController implements ActionListener, ChangeListener, W
 
     @Override
     public void windowClosing(WindowEvent e) {
-
+        handlerSetDefaultValues();
     }
 
     @Override
@@ -79,11 +76,42 @@ public class ChangeDialogController implements ActionListener, ChangeListener, W
 
     @Override
     public void windowActivated(WindowEvent e) {
-        handlerSetDefaultValues();
+
     }
 
     @Override
     public void windowDeactivated(WindowEvent e) {
 
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // Obtener el carácter de la tecla que fue presionada
+        char c = e.getKeyChar();
+        if(!Character.isDigit(c)){
+            JOptionPane.showMessageDialog(null, "Sólo números permitidos");
+            e.consume();
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        String kgValue = changeDialog.getKgValue();
+        if(!kgValue.isEmpty()){
+            int kg = Integer.parseInt(kgValue);
+            if(kg >=1000){
+                kg = 1000;
+            }
+            changeDialog.setSlValue(kg);
+            changeDialog.setKgValue(kg);
+        }else{
+            changeDialog.setSlValue(0);
+            changeDialog.setKgValue(0);
+        }
     }
 }

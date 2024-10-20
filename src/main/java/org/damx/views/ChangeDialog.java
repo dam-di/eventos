@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 import java.awt.event.WindowListener;
 
 public class ChangeDialog extends JDialog implements InterfaceView {
@@ -46,6 +47,7 @@ public class ChangeDialog extends JDialog implements InterfaceView {
     public void addListener(ActionListener listener) {
         sl_kg.addChangeListener((ChangeListener) listener);
         this.addWindowListener((WindowListener) listener);
+        tx_kg.addKeyListener((KeyListener) listener);
     }
 
     @Override
@@ -60,6 +62,14 @@ public class ChangeDialog extends JDialog implements InterfaceView {
 
     public int getSlValue(){
         return sl_kg.getValue();
+    }
+
+    public void setSlValue(int value){
+        sl_kg.setValue(value);
+    }
+
+    public String getKgValue(){
+        return tx_kg.getText();
     }
 
     public void setKgValue(int value){
