@@ -50,6 +50,16 @@
           <text value="ITEM LISTENER"/>
         </properties>
       </component>
+      <component id="74f8b" class="javax.swing.JButton" binding="bt_changelistener">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="28" style="1"/>
+          <text value="CHANGE LISTENER"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
