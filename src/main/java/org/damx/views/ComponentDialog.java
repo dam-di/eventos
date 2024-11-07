@@ -1,8 +1,10 @@
 package org.damx.views;
 
 import javax.swing.*;
+import javax.swing.event.AncestorListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentListener;
 
 import static org.damx.controllers.ComponentDialogController.NAVIGATE_PANEL1;
 import static org.damx.controllers.ComponentDialogController.NAVIGATE_PANEL2;
@@ -15,8 +17,8 @@ public class ComponentDialog extends JDialog implements InterfaceView {
 
     private CardLayout navegador;
 
-    private Panel1 panel1;
-    private Panel2 panel2;
+    public Panel1 panel1;
+    public Panel2 panel2;
 
     public ComponentDialog(JFrame parent, boolean modal){
         super(parent, modal);
@@ -50,6 +52,9 @@ public class ComponentDialog extends JDialog implements InterfaceView {
     public void addListener(ActionListener listener) {
         bt_panel1.addActionListener(listener);
         bt_panel2.addActionListener(listener);
+        panel1.addAncestorListener((AncestorListener) listener);
+        panel2.addAncestorListener((AncestorListener) listener);
+
     }
 
     @Override

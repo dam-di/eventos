@@ -67,7 +67,7 @@
         </constraints>
         <properties>
           <font size="28" style="1"/>
-          <text value="COMPONENT L."/>
+          <text value="ANCESTOR L."/>
         </properties>
       </component>
     </children>

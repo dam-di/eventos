@@ -2,6 +2,8 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.damx.views.Panel1">
   <grid id="27dc6" binding="mainPanel" layout-manager="FormLayout">
     <rowspec value="top:27dlu:noGrow"/>
+    <rowspec value="top:20dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="center:d:grow"/>
     <colspec value="fill:d:grow"/>
     <constraints>
@@ -22,6 +24,15 @@
         <properties>
           <font size="24" style="1"/>
           <text value="PANEL 1"/>
+        </properties>
+      </component>
+      <component id="98040" class="javax.swing.JLabel" binding="tx_contador">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="Label"/>
         </properties>
       </component>
     </children>
