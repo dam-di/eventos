@@ -3,7 +3,11 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="FormLayout">
     <rowspec value="top:27dlu:noGrow"/>
     <rowspec value="top:20dlu:noGrow"/>
-    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:40px:noGrow"/>
+    <rowspec value="top:17dlu:noGrow"/>
+    <rowspec value="center:33px:noGrow"/>
+    <rowspec value="top:19dlu:noGrow"/>
+    <rowspec value="center:49px:noGrow"/>
     <rowspec value="center:d:grow"/>
     <colspec value="fill:d:grow"/>
     <constraints>
@@ -33,6 +37,51 @@
         </constraints>
         <properties>
           <text value="Label"/>
+        </properties>
+      </component>
+      <component id="2c106" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="NOMBRE"/>
+        </properties>
+      </component>
+      <component id="1716c" class="javax.swing.JTextField" binding="tx_nombre">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms top="0" left="10" bottom="0" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7df12" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="DNI"/>
+        </properties>
+      </component>
+      <component id="628da" class="javax.swing.JTextField" binding="tx_dni">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms top="0" left="10" bottom="0" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8d56a" class="javax.swing.JButton" binding="bt_aceptar">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <forms top="10" left="10" bottom="10" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="ACEPTAR"/>
         </properties>
       </component>
     </children>

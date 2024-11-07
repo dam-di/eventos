@@ -1,5 +1,7 @@
 package org.damx.views;
 
+import org.damx.controllers.Panel1Controller;
+
 import javax.swing.*;
 import javax.swing.event.AncestorListener;
 import java.awt.*;
@@ -61,6 +63,7 @@ public class ComponentDialog extends JDialog implements InterfaceView {
     public void initComponents() {
         navegador = (CardLayout) contenedorPaneles.getLayout();
         panel1 = new Panel1();
+        panel1.addListener(new Panel1Controller(panel1));
         panel2 = new Panel2();
         contenedorPaneles.add(panel1,"Panel1");
         contenedorPaneles.add(panel2,"Panel2");
