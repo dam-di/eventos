@@ -6,6 +6,7 @@ import org.damx.views.ChangeDialog;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -86,6 +87,9 @@ public class ChangeDialogController implements ActionListener, ChangeListener, W
 
     @Override
     public void keyTyped(KeyEvent e) {
+
+
+        System.out.println("2");
         // Obtener el carácter de la tecla que fue presionada
         char c = e.getKeyChar();
         if(!Character.isDigit(c)){
@@ -96,11 +100,17 @@ public class ChangeDialogController implements ActionListener, ChangeListener, W
 
     @Override
     public void keyPressed(KeyEvent e) {
+        System.out.println("1");
+        if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
+            e.consume();
+            changeDialog.closeWindow();
 
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+        System.out.println("3");
         String kgValue = changeDialog.getKgValue();
         if(!kgValue.isEmpty()){
             int kg = Integer.parseInt(kgValue);

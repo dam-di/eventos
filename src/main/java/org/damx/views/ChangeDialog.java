@@ -35,6 +35,7 @@ public class ChangeDialog extends JDialog implements InterfaceView {
 
     @Override
     public void closeWindow() {
+        JOptionPane.showConfirmDialog(null,"¿Deseas salir?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE);
         dispose();
     }
 
@@ -48,6 +49,7 @@ public class ChangeDialog extends JDialog implements InterfaceView {
         sl_kg.addChangeListener((ChangeListener) listener);
         this.addWindowListener((WindowListener) listener);
         tx_kg.addKeyListener((KeyListener) listener);
+        this.addKeyListener((KeyListener) listener);
     }
 
     @Override
