@@ -9,7 +9,6 @@ public class Panel2 extends JPanel {
         initPanel();
     }
 
-
     private void initPanel(){
         add(mainPanel);
     }
