@@ -11,6 +11,7 @@ public class MainFrame extends JFrame implements InterfaceView {
     private JPanel mainPanel;
     private JButton bt_itemlistener;
     private JButton bt_changelistener;
+    private JButton bt_component;
 
     public MainFrame() {
         initWindow();
@@ -40,6 +41,7 @@ public class MainFrame extends JFrame implements InterfaceView {
         bt_actionlistener.setActionCommand(SHOW_ACTIONDIALOG);
         bt_itemlistener.setActionCommand(SHOW_ITEMDIALOG);
         bt_changelistener.setActionCommand(SHOW_CHANGEDIALOG);
+        bt_component.setActionCommand(SHOW_COMPONENTDIALOG);
     }
 
     @Override
@@ -47,6 +49,7 @@ public class MainFrame extends JFrame implements InterfaceView {
         bt_actionlistener.addActionListener(listener);
         bt_itemlistener.addActionListener(listener);
         bt_changelistener.addActionListener(listener);
+        bt_component.addActionListener(listener);
     }
 
     @Override

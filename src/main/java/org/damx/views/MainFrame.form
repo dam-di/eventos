@@ -5,7 +5,7 @@
     <rowspec value="top:38dlu:noGrow"/>
     <rowspec value="center:61px:noGrow"/>
     <rowspec value="top:33dlu:noGrow"/>
-    <rowspec value="top:20dlu:noGrow"/>
+    <rowspec value="top:29dlu:noGrow"/>
     <rowspec value="center:35px:noGrow"/>
     <rowspec value="center:d:grow"/>
     <colspec value="fill:d:grow"/>
@@ -58,6 +58,16 @@
         <properties>
           <font size="28" style="1"/>
           <text value="CHANGE LISTENER"/>
+        </properties>
+      </component>
+      <component id="9c7ce" class="javax.swing.JButton" binding="bt_component">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="28" style="1"/>
+          <text value="COMPONENT L."/>
         </properties>
       </component>
     </children>
